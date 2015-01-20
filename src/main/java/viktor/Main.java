@@ -2,7 +2,7 @@ package viktor;
 
 public class Main {
 	public static void main(String[] args){
-		System.out.println("A Bit Better Message");
+		System.out.println("An even better message!");
 	}
 
 }
