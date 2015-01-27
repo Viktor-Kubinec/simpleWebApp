@@ -12,7 +12,7 @@ import org.eclipse.jetty.server.handler.AbstractHandler;
 
 public class StupidServer {
 	
-	static Server server = new Server(8080);
+	static Server server;
 	
 	static class HelloHandler extends AbstractHandler
 	{
@@ -32,6 +32,8 @@ public class StupidServer {
 	}
 	
 	public static void main(String[] args) throws Exception{
+		server = new Server(Integer.parseInt(args[0]));
+		System.out.println("Starting Stupid Server on port " + args[0]);
 		server.setHandler(new HelloHandler());
 		server.start();
         server.join();
